@@ -1,0 +1,5 @@
+num1 = input('Tal numero ')
+num2 = input('dividido por ')
+result = int(num1) / int(num2)
+Round = round(result,1)
+print(Round)

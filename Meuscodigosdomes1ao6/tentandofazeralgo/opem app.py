@@ -1,0 +1,4 @@
+import os
+tempo_em_segundos = 6 * 10
+print(f"O computador irá desligar em {tempo_em_segundos} segundos.")
+os.system(f"shutdown /s /t {tempo_em_segundos}")
