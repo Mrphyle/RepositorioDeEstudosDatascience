@@ -1,0 +1,57 @@
+body {
+    background-color: #444444;
+  }
+.button {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: 50px;
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .email-button {
+    background-image: url('Botão\ login.png');
+    background-position: center;
+  }
+  
+  .password-button {
+    background-image: url('Botão\ senha.png');
+    background-position: center;
+  }
+  
+  .google-button {
+    background-image: url('googlebutton.png');
+    background-position: center;
+  }
+
+  .enter-button {
+    background-image: url('Enter\ button.png');
+    background-position: center;
+  }
+  /* Posicionando os botões (ajuste os valores conforme necessário) */
+  .button-area {
+    position: relative;
+  }
+  
+  .email-button {
+    position: absolute;
+    top: 306px;
+    left: 748px;
+  }
+  
+  .password-button {
+    position: absolute;
+    top: 809px;
+    left: 748px;
+  }
+  
+  .google-button {
+    position: absolute;
+    top: 1563px;
+    left: 737px;
+  }
+  .enter-button {
+    position: absolute;
+    top: 1921px;
+    left: 1253px
+
+  }
