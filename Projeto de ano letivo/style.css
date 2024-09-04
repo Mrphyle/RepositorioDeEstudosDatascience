@@ -1,8 +1,8 @@
-body {
+/*body {
     background-color: #444444;
   }
 .button {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
+    width: 200px; /* Ajuste o tamanho conforme necessário 
     height: 50px;
     background-size: cover;
     cursor: pointer;
@@ -27,7 +27,7 @@ body {
     background-image: url('Enter\ button.png');
     background-position: center;
   }
-  /* Posicionando os botões (ajuste os valores conforme necessário) */
+  /* Posicionando os botões (ajuste os valores conforme necessário) 
   .button-area {
     position: relative;
   }
@@ -54,4 +54,5 @@ body {
     top: 1921px;
     left: 1253px
 
-  }
+  }*/
+  
