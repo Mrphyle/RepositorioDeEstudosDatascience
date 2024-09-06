@@ -15,26 +15,24 @@
             margin: 0;
         }
         .imgoogle {
-            width: 100%; /* 100% da largura do container */
-            max-width: 584px; /* Tamanho máximo */
-            height: auto; /* Mantém a proporção */
+            width: 100%; 
+            max-width: 584px; 
+            height: auto;
         }
 
-        /* Media queries para telas menores */
         @media (max-width: 768px) {
             body {
                 height: auto;
                 padding: 20px;
             }
             .imgoogle {
-                width: 90%; /* Reduz a largura da imagem para telas menores */
+                width: 90%;
             }
         }
 
-        /* Media queries para telas muito pequenas, como celulares */
         @media (max-width: 480px) {
             .imgoogle {
-                width: 80%; /* Ajuste adicional para telas muito pequenas */
+                width: 80%;
             }
         }
     </style>
@@ -43,10 +41,18 @@
     <a href="javascript:void(0);" onclick="openGoogle()">
         <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
     </a>
-    
+
     <script>
         function openGoogle() {
-            window.open("https://www.google.com", "popup", "width=600,height=600");
+            // Obtem as dimensões da tela
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+
+            // Define o tamanho do pop-up como 80% da largura e altura da tela, com um tamanho mínimo
+            var popupWidth = Math.max(screenWidth * 0.8, 300); // No mínimo 300px de largura
+            var popupHeight = Math.max(screenHeight * 0.8, 300); // No mínimo 300px de altura
+
+            window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
         }
     </script>
 </body>
