@@ -7,5 +7,5 @@ function openGoogle() {
   var popupWidth = Math.max(screenWidth * 0.8, 300); // No mínimo 300px de largura
   var popupHeight = Math.max(screenHeight * 0.8, 300); // No mínimo 300px de altura
 
-  window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
+  window.open("https://www.codewars.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
 }
