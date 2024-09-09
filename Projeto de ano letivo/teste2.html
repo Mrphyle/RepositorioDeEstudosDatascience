@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/Logomarca.ico" type="image/x-icon">
     <title>Treine REM</title>
+    <!--tem algo errado no css mas não sei como resolver\/-->
     <style>
         body {
             background-color: #444;
@@ -14,11 +15,26 @@
             height: 100vh;
             margin: 0;
         }
-        .imgoogle {
-            width: 100%; 
-            max-width: 584px; 
-            height: auto;
+        .imgEmail {
+            width: 36vw;
+            height: 08vh;
+            margin-top: 90vh;
         }
+        .imgsenha {
+            width: 36vw;
+            height: 08vh;
+            margin-top: 60vh;
+        }
+        .imgoogle {
+            width: 36vw; 
+            height: 08vh;
+            margin-top: 30vh;
+        }
+        .imgenviar {
+            width: 36vw;
+            height: 08vh;
+            margin-top: 15vh;
+        } 
 
         @media (max-width: 768px) {
             body {
@@ -28,30 +44,35 @@
             .imgoogle {
                 width: 90%;
             }
+            
         }
 
         @media (max-width: 480px) {
-            .imgoogle {
-                width: 80%;
+            .imgEmail {
+                width: 60%;
             }
+            .imgoogle {
+                width: 90%;
+            }
+            
         }
     </style>
 </head>
 <body>
     <a href="javascript:void(0);" onclick="openGoogle()">
+        <!--imagem dos botoes-->
+        <img src="imagens/Botão login.png" class="imgEmail" alt="Email">
+        <img src="imagens/Botão senha.png" class="imgsenha" alt="senha">
         <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
+        <img src="imagens/Enter button.png" class="imgenviar" alt="emviar">
     </a>
-
+    
     <script>
         function openGoogle() {
-            // Obtem as dimensões da tela
             var screenWidth = window.innerWidth;
             var screenHeight = window.innerHeight;
-
-            // Define o tamanho do pop-up como 80% da largura e altura da tela, com um tamanho mínimo
-            var popupWidth = Math.max(screenWidth * 0.8, 300); // No mínimo 300px de largura
-            var popupHeight = Math.max(screenHeight * 0.8, 300); // No mínimo 300px de altura
-
+            var popupWidth = Math.max(screenWidth * 0.4, 400); 
+            var popupHeight = Math.max(screenHeight * 0.4, 400);
             window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
         }
     </script>
