@@ -5,36 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/Logomarca.ico" type="image/x-icon">
     <title>Treine REM</title>
-    <!--tem algo errado no css mas não sei como resolver\/-->
     <style>
         body {
             background-color: #444;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Adicionado para alinhar os botões verticalmente */
             height: 100vh;
             margin: 0;
         }
-        .imgEmail {
+        .imgEmail, .imgsenha, .imgoogle, .imgenviar {
             width: 36vw;
             height: 08vh;
-            margin-top: 90vh;
+            margin-top: 15px; /* Ajuste a margem conforme necessário */
         }
-        .imgsenha {
-            width: 36vw;
-            height: 08vh;
-            margin-top: 60vh;
-        }
-        .imgoogle {
-            width: 36vw; 
-            height: 08vh;
-            margin-top: 30vh;
-        }
-        .imgenviar {
-            width: 36vw;
-            height: 08vh;
-            margin-top: 15vh;
-        } 
 
         @media (max-width: 768px) {
             body {
@@ -44,7 +29,6 @@
             .imgoogle {
                 width: 90%;
             }
-            
         }
 
         @media (max-width: 480px) {
@@ -54,17 +38,21 @@
             .imgoogle {
                 width: 90%;
             }
-            
         }
     </style>
 </head>
 <body>
-    <a href="javascript:void(0);" onclick="openGoogle()">
-        <!--imagem dos botoes-->
+    <a href="javascript:void(0);">
         <img src="imagens/Botão login.png" class="imgEmail" alt="Email">
+    </a>
+    <a href="javascript:void(0);">
         <img src="imagens/Botão senha.png" class="imgsenha" alt="senha">
+    </a>
+    <a href="javascript:void(0);" onclick="openGoogle()">
         <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
-        <img src="imagens/Enter button.png" class="imgenviar" alt="emviar">
+    </a>
+    <a href="javascript:void(0);">
+        <img src="imagens/Enter button.png" class="imgenviar" alt="enviar">
     </a>
     
     <script>
