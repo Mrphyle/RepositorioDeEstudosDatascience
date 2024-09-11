@@ -11,42 +11,83 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Adicionado para alinhar os botões verticalmente */
             height: 100vh;
             margin: 0;
         }
-        .imgoogle {
-            width: 100%; /* 100% da largura do container */
-            max-width: 584px; /* Tamanho máximo */
-            height: auto; /* Mantém a proporção */
+        .inputContainer {
+            position: relative;
+            width: 36vw;
+            height: 10vh;
+            margin-top: 15px; /* Ajuste a margem conforme necessário */
+        }
+        .inputField {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 1em;
+            box-sizing: border-box;
+            background: none;
+            border: none;
+            color: white;
+        }
+        .inputContainer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            z-index: -1;
+        }
+        .emailContainer::before {
+            background-image: url('imagens/Botão login.png');
+        }
+        .senhaContainer::before {
+            background-image: url('imagens/Botão senha.png');
+        }
+        .imgenviar {
+            width: 19.5vw; /*3.3*/
+            height: 15vh;  /*1.8 e */
+            margin-top: 15px; /* Ajuste a margem conforme necessário */
         }
 
-        /* Media queries para telas menores */
         @media (max-width: 768px) {
             body {
                 height: auto;
                 padding: 20px;
             }
-            .imgoogle {
-                width: 90%; /* Reduz a largura da imagem para telas menores */
+            .inputContainer {
+                width: 90%; /* Ajuste para telas menores */
             }
         }
 
-        /* Media queries para telas muito pequenas, como celulares */
         @media (max-width: 480px) {
-            .imgoogle {
-                width: 80%; /* Ajuste adicional para telas muito pequenas */
+            .inputContainer {
+                width: 60%;
             }
         }
     </style>
 </head>
 <body>
-    <a href="javascript:void(0);" onclick="openGoogle()">
-        <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
+    <div class="inputContainer emailContainer">
+        <input type="email" class="inputField" placeholder="Escreva seu email aqui" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escreva seu email aqui'">
+    </div>
+    <div class="inputContainer senhaContainer">
+        <input type="password" class="inputField" placeholder="Crie sua senha aqui" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Crie sua senha aqui'">
+    </div>
+    <a href="javascript:void(0);">
+        <img src="imagens/Enter button.png" class="imgenviar" alt="Enviar">
     </a>
     
     <script>
         function openGoogle() {
-            window.open("https://www.google.com", "popup", "width=600,height=600");
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+            var popupWidth = Math.max(screenWidth * 0.4, 400); 
+            var popupHeight = Math.max(screenHeight * 0.4, 400);
+            window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
         }
     </script>
 </body>
