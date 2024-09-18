@@ -1,0 +1,101 @@
+<!--index para pc-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/Logomarca.ico" type="image/x-icon">
+    <title>Treine REM</title>
+    <style>
+        body {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            width: 36vw;
+            height: 10vh;
+            margin-top: 15px;
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+        .text-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background: transparent;
+            color: white;
+            box-sizing: border-box; /* Adicionado para incluir padding e border no tamanho total */
+        }
+        .imgoogle {
+            width: 35vw;
+            height: 10vh;
+            margin-top: 15px;
+        }
+        .imgenviar {
+            width: 15vw;
+            height: 10vh;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+            .imgoogle, .imgenviar {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 60%;
+            }
+            .imgoogle, .imgenviar {
+                width: 90%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container imgEmail">
+        <img src="imagens/Botão login.png" alt="Email" class="image">
+        <input type="text" class="text-input" placeholder="Digite seu email" aria-label="Digite seu email">
+    </div>
+    <div class="container imgsenha">
+        <img src="imagens/Botão senha.png" alt="Senha" class="image">
+        <input type="password" class="text-input" placeholder="Digite sua senha" aria-label="Digite sua senha">
+    </div>
+    <a href="javascript:void(0);" onclick="openGoogle()">
+        <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
+    </a>
+    <a href="javascript:void(0);">
+        <img src="imagens/Enter button.png" class="imgenviar" alt="Enviar">
+    </a>
+    
+    <script>
+        function openGoogle() {
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+            var popupWidth = Math.max(screenWidth * 0.4, 400); 
+            var popupHeight = Math.max(screenHeight * 0.4, 400);
+            window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
+        }
+    </script>
+</body>
+</html>
