@@ -1,3 +1,4 @@
+<!--index para pc-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,53 +16,37 @@
             height: 100vh;
             margin: 0;
         }
-
-        input[type=email], input[type=password] {
+        .container {
+            position: relative;
             width: 36vw;
-            height: 10vh; /* Mantendo altura personalizada */
-            padding: 10px;
+            height: 10vh;
             margin-top: 15px;
-            background: transparent; /* Fundo transparente */
-            border: 2px solid #706C6C; /* Adiciona borda para visualização */
-            border-radius: 5px;
-            color: white; /* Cor do texto */
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+        .text-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
             font-size: 16px;
+            border: none;
+            background: transparent;
+            color: white;
+            box-sizing: border-box; /* Adicionado para incluir padding e border no tamanho total */
         }
-
-        /* Estilo do placeholder */
-        input[type=email]::placeholder, input[type=password]::placeholder {
-            color: #706C6C; /* Cor do placeholder */
-        }
-
         .imgoogle {
             width: 35vw;
             height: 10vh;
             margin-top: 15px;
         }
-
         .imgenviar {
             width: 19.5vw;
             height: 15vh;
-            margin-top: 15px;
-            background-color: transparent;
-            background-image: url('imagens/Enter button.png'); /* Substitua pelo caminho correto */
-            background-size: cover; /* Garante que a imagem cubra o botão sem deformar */
-            background-repeat: no-repeat;
-            background-position: center;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Classes personalizadas */
-        .imgEmail {
-            width: 36vw;
-            height: 10vh;
-            margin-top: 15px;
-        }
-
-        .imgsenha {
-            width: 36vw;
-            height: 10vh;
             margin-top: 15px;
         }
 
@@ -70,28 +55,38 @@
                 height: auto;
                 padding: 20px;
             }
-            input[type=email], input[type=password], .imgoogle, .imgenviar {
+            .imgoogle, .imgenviar {
                 width: 90%;
+                height: auto;
             }
         }
 
         @media (max-width: 480px) {
-            input[type=email], input[type=password], .imgenviar {
+            .container {
                 width: 60%;
             }
-            .imgoogle {
+            .imgoogle, .imgenviar {
                 width: 90%;
+                height: auto;
             }
         }
     </style>
 </head>
 <body>
-    <input type="email" placeholder="Escreva seu email aqui" class="imgEmail" required>
-    <input type="password" placeholder="Crie sua senha aqui" class="imgsenha" required>
+    <div class="container imgEmail">
+        <img src="imagens/Botão login.png" alt="Email" class="image">
+        <input type="text" class="text-input" placeholder="Digite seu email" aria-label="Digite seu email">
+    </div>
+    <div class="container imgsenha">
+        <img src="imagens/Botão senha.png" alt="Senha" class="image">
+        <input type="password" class="text-input" placeholder="Digite sua senha" aria-label="Digite sua senha">
+    </div>
     <a href="javascript:void(0);" onclick="openGoogle()">
         <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
     </a>
-    <button type="submit" class="imgenviar"></button>
+    <a href="javascript:void(0);">
+        <img src="imagens/Enter button.png" class="imgenviar" alt="Enviar">
+    </a>
     
     <script>
         function openGoogle() {
