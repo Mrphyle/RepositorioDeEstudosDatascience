@@ -1,3 +1,4 @@
+<!--index para pc-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Adicionado para alinhar os botões verticalmente */
+            flex-direction: column;
             height: 100vh;
             margin: 0;
         }
@@ -19,7 +20,7 @@
             position: relative;
             width: 36vw;
             height: 10vh;
-            margin-top: 15px; /* Ajuste a margem conforme necessário */
+            margin-top: 15px;
         }
         .image {
             width: 100%;
@@ -27,21 +28,26 @@
         }
         .text-input {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             padding: 10px;
             font-size: 16px;
+            border: none;
+            background: transparent;
+            color: white;
+            box-sizing: border-box; /* Adicionado para incluir padding e border no tamanho total */
         }
         .imgoogle {
-            width: 35vw; /*8.7*/
-            height: 10vh; /**/
-            margin-top: 15px; /* Ajuste a margem conforme necessário */
+            width: 35vw;
+            height: 10vh;
+            margin-top: 15px;
         }
         .imgenviar {
-            width: 19.5vw; /*3.3*/
-            height: 15vh;  /*1.8 e */
-            margin-top: 15px; /* Ajuste a margem conforme necessário */
+            width: 15vw;
+            height: 10vh;
+            margin-top: 15px;
         }
 
         @media (max-width: 768px) {
@@ -49,8 +55,9 @@
                 height: auto;
                 padding: 20px;
             }
-            .imgoogle {
-                width: 90%; /* Ajuste para telas menores */
+            .imgoogle, .imgenviar {
+                width: 90%;
+                height: auto;
             }
         }
 
@@ -58,8 +65,9 @@
             .container {
                 width: 60%;
             }
-            .imgoogle {
-                width: 90%; /* Ajuste para telas menores */
+            .imgoogle, .imgenviar {
+                width: 90%;
+                height: auto;
             }
         }
     </style>
@@ -67,11 +75,11 @@
 <body>
     <div class="container imgEmail">
         <img src="imagens/Botão login.png" alt="Email" class="image">
-        <input type="text" class="text-input" placeholder="Digite seu email">
+        <input type="text" class="text-input" placeholder="Digite seu email" aria-label="Digite seu email">
     </div>
     <div class="container imgsenha">
         <img src="imagens/Botão senha.png" alt="Senha" class="image">
-        <input type="password" class="text-input" placeholder="Digite sua senha">
+        <input type="password" class="text-input" placeholder="Digite sua senha" aria-label="Digite sua senha">
     </div>
     <a href="javascript:void(0);" onclick="openGoogle()">
         <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">

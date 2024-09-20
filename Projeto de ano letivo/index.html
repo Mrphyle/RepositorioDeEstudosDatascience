@@ -3,104 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/Logomarca.ico" type="image/x-icon">
-    <title>Treine REM</title>
-    <style>
-        body {
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-        }
-
-        input[type=email], input[type=password] {
-            width: 36vw;
-            height: 10vh; /* Mantendo altura personalizada */
-            padding: 10px;
-            margin-top: 15px;
-            background: transparent; /* Fundo transparente */
-            border: 2px solid #706C6C; /* Adiciona borda para visualização */
-            border-radius: 5px;
-            color: white; /* Cor do texto */
-            font-size: 16px;
-        }
-
-        /* Estilo do placeholder */
-        input[type=email]::placeholder, input[type=password]::placeholder {
-            color: #706C6C; /* Cor do placeholder */
-        }
-
-        .imgoogle {
-            width: 35vw;
-            height: 10vh;
-            margin-top: 15px;
-        }
-
-        .imgenviar {
-            width: 15vw;
-            height: 10vh;
-            margin-top: 15px;
-            background-color: transparent;
-            background-image: url('imagens/Enter button.png'); /* Substitua pelo caminho correto */
-            background-size: cover; /* Garante que a imagem cubra o botão sem deformar */
-            background-repeat: no-repeat;
-            background-position: center;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Classes personalizadas */
-        .imgEmail {
-            width: 36vw;
-            height: 10vh;
-            margin-top: 15px;
-        }
-
-        .imgsenha {
-            width: 36vw;
-            height: 10vh;
-            margin-top: 15px;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                height: auto;
-                padding: 20px;
-            }
-            input[type=email], input[type=password], .imgoogle, .imgenviar {
-                width: 90%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            input[type=email], input[type=password], .imgenviar {
-                width: 60%;
-            }
-            .imgoogle {
-                width: 90%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <input type="email" placeholder="Escreva seu email aqui" class="imgEmail" required>
-    <input type="password" placeholder="Crie sua senha aqui" class="imgsenha" required>
-    <a href="javascript:void(0);" onclick="openGoogle()">
-        <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
-    </a>
-    <button type="submit" class="imgenviar"></button>
-    
+    <title>Detecção de Dispositivo</title>
     <script>
-        function openGoogle() {
-            var screenWidth = window.innerWidth;
-            var screenHeight = window.innerHeight;
-            var popupWidth = Math.max(screenWidth * 0.4, 400); 
-            var popupHeight = Math.max(screenHeight * 0.4, 400);
-            window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Verifica se é um dispositivo móvel (smartphone ou tablet)
+            if (/android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent)) {
+                // Se for um dispositivo móvel
+                window.location.href = "indexcell.html";
+            } else {
+                // Se for um desktop ou laptop
+                window.location.href = "indexpc.html";
+            }
         }
     </script>
+</head>
+<body>
+    <p>Redirecionando...</p>
 </body>
 </html>
