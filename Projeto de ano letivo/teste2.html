@@ -74,8 +74,16 @@
         function openGoogle() {
             var screenWidth = window.innerWidth;
             var screenHeight = window.innerHeight;
+<<<<<<< Updated upstream
             var popupWidth = Math.max(screenWidth * 0.4, 400); 
             var popupHeight = Math.max(screenHeight * 0.4, 400);
+=======
+
+            // Define o tamanho do pop-up como 80% da largura e altura da tela, com um tamanho mínimo
+            var popupWidth = Math.max(screenWidth * 0.3, 300); // No mínimo 300px de largura
+            var popupHeight = Math.max(screenHeight * 0.3, 300); // No mínimo 300px de altura
+
+>>>>>>> Stashed changes
             window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
         }
     </script>
