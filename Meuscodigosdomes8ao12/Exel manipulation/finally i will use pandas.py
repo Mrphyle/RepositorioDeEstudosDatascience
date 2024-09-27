@@ -8,7 +8,8 @@ def xls_to_sql(exel_file,sheet_name,db_name,table_name):
     conn.close
     print(f"Crated table {table_name} in {db_name}.")
 
-file = r"C:\Users\diego.sgoncalves10\Documents\GitHub\repositoriodeestudosDatascience\Meuscodigosdomes8ao12\Exel manipulation\Exel\bdexcel.xlsx"
+file = "bdexcel.xlsx"
 sheet = "spreadsheet1"
 database = "databese.slite3" 
 table = "student"
+xls_to_sql(file,sheet,database,table)
