@@ -9,7 +9,7 @@ def xls_to_sql(exel_file,sheet_name,db_name,table_name):
     print(f"Crated table {table_name} in {db_name}.")
 
 file = "bdexcel.xlsx"
-sheet = "spreadsheet1"
+sheet = "Planilha1"
 database = "databese.slite3" 
 table = "student"
 xls_to_sql(file,sheet,database,table)
