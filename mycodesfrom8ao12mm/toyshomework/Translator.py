@@ -1,7 +1,9 @@
 #pip install googletrans
 #pip install googletrans==4.0.0-rc1
+#pip install pycopy-copy
 def repeatranslatorcode():
     from googletrans import Translator
+    
     firstlanguage= input("type the phrase or word to translate: ")
     languagetotranlate= input("type the lenguage that you want to tranlate: ")
     def translator_language():
@@ -26,7 +28,7 @@ while True:
     repeatranslatorcode()
     repeatcode = input("\n-------------\nyou want translate other phrase(y/n)? ")
     if repeatcode.lower() == "y":
-        print(f"{"\n"*2}-------\n")
+        print("\n\n-------\n")
         pass
     elif repeatcode.lower() =="n":
         print("\n code finished!\n---------")

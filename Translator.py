@@ -1,8 +1,10 @@
 #https://mybrowseraddon.com/dark-mode.html
 #pip install googletrans
 #pip install googletrans==4.0.0-rc1
+#pip install pyperclip
 def repeatranslatorcode():
     from googletrans import Translator
+    import pyperclip
     firstlanguage= input("type the phrase or word to translate: ")
     languagetotranlate= input("type the lenguage that you want to tranlate: ")
     def translator_language():
@@ -21,13 +23,18 @@ def repeatranslatorcode():
                 print(f"\noriginal language: {firstlanguage}\n")
                 translated = translator.translate(firstlanguage, dest="pt")
                 print(f"translate to ptbr: {translated.text}")
+                copi= input("you want copy this translation(y/n)? ")
+                if copi.lower() ==  "y":
+                    pyperclip.copy(translated.text)
+                else:
+                    pass
             translate_ptbr()
     translator_language()
 while True:
     repeatranslatorcode()
     repeatcode = input("\n-------------\nyou want translate other phrase(y/n)? ")
     if repeatcode.lower() == "y":
-        print(f"{"\n"*2}-------\n")
+        print("\n\n-------\n")
         pass
     elif repeatcode.lower() =="n":
         print("\n code finished!\n---------")

@@ -10,4 +10,3 @@ try:
         databese="pandinha"
     )
     index = pd.read_excel("bdexel.xlsx",sheet_name="Planilha1")
-    for i in index :
