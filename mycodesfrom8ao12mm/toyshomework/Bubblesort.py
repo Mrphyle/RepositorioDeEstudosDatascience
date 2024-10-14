@@ -1,18 +1,26 @@
-def bubble_sort(lista):
-    n = len(lista)
-    for i in range(n):
-        # Flag para detectar se houve troca na iteração
-        trocado = False
-        for i in range(0, n - i - 1):
-            if lista[i] > lista[i + 1]:
-                # Troca de elementos
-                lista[i], lista[i + 1] = lista[i + 1], lista[i]
-                trocado = True
-        # Se não houve trocas, a lista já está ordenada
-        if not trocado:
-            break
-    return lista
+while True:
+    List = []
+    inputnumberlist = int(input("when numbers you want add in this List? "))
+    for i in range(inputnumberlist):
+        inputnumbers_in_list = int(input("add number: "))
+        List.append(inputnumbers_in_list)
 
-# Exemplo de uso
-lista = [64, 34, 25, 12, 22, 11, 90]
-print(bubble_sort(lista))
+    def bubblesort():
+        nun = len(List)
+        ligado = True
+        while ligado:
+            ligado = False
+            for i in range(nun - 1):
+                if List[i] > List[i + 1]:
+                    temp = List[i]
+                    List[i] = List[i + 1]
+                    List[i + 1] = temp
+                    ligado = True
+            nun = nun - 1
+    bubblesort()
+    print(List,"\n")
+    restartcode= input("you want restart this code? ")
+    if restartcode.lower() == "y":
+        pass
+    else:
+        break
