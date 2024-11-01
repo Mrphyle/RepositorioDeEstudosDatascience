@@ -1,15 +1,19 @@
-#CREATE TABLE funcionarios(id int, nome varchar(70), cidade varchar(70), datanacimento varchar(15));
-#resolvesql or sonvesql
 import pandas as pd
-import mysql.connector as msc
-from sqlalchemy import crea
-try:
-    conn = msc.connect(
-        host="localhost",
-        user="root",
-        password=""
-        databese="pandinha"
-    )
-    index = pd.read_excel("bdexel.xlsx",sheet_name="Planilha1")
-except:
-    print("ERROR!!!")
+import mysql.connector as msql
+from sqlalchemy import create_engine
+def xlstosql(excel_file, sheet_name, db_name, table_name):
+    try:
+        df = pd.read_excel(excel_file, sheet_name=sheet_name)
+        conn = msql.connect(host="localhost",
+                            user="root",
+                            password="",
+                            database=db_name)
+        engine = create_engine(f'mysql+mysqlconnector://root:@localhost/{db_name}')
+        df.to_sql(table_name, con=engine, if_exists='replace', index=False)
+    except:
+        print('Erro')
+ 
+arquivo = 'bdexcel.xlsx'
+banco = 'ruby'
+tabela = 'aluno'
+xlstosql(arquivo,banco,tabela)
