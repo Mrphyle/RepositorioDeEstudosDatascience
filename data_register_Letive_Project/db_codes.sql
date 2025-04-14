@@ -1,0 +1,2 @@
+Create database Db_Brinquedos_em_Movimento
+Create table Brinquedos
