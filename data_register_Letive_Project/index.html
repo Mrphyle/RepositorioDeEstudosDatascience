@@ -29,4 +29,25 @@
     <input type="text" id="observacao" placeholder="alguma observação?">
     <button>Enviar dados</button>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const instituitiond_donor = document.getElementById("nomeInstituicao").value;
+        const QuantityOfToys = document.getElementById("quantidadeBrinquedos").value;
+        const LocationReceived = document.getElementById("localColeta").value;
+        const DateReceived = document.getElementById("dataColeta").value; // Corrigido o ID
+        const LocationDonated = document.getElementById("localDoacao").value;
+        const DateDonated = document.getElementById("dataEntrega").value; // Corrigido o ID
+        const Observations = document.getElementById("observacao").value;
+
+        console.log({
+            instituitiond_donor,
+            QuantityOfToys,
+            LocationReceived,
+            DateReceived,
+            LocationDonated,
+            DateDonated,
+            Observations
+        });
+    });
+</script>
 </html>
