@@ -10,6 +10,8 @@ def read_exel_sheets():
     return sheets1, sheet2, sheet3, sheet4
 def redrect():
     dEstado, fMovimentacao, dVendedor, dProduto = read_exel_sheets()
-    CodigoEstado = fMovimentacao['Codig_Estado'].map(dEstado.set_index('Codig_Estado')['Estado'])
-    
+    Estado = fMovimentacao['Codig_Estado'].map(dEstado.set_index('Codig_Estado')['Estado'])
+    Vendedor = fMovimentacao['Codig_Vendedor'].map(dVendedor.set_index('Código_Vendedor')['Vemdedor'])
+    Produto = fMovimentacao['Codig_'].map(dProduto.set_index('Codig_Produto')['Produto'])
+    return fMovimentacao 
     
