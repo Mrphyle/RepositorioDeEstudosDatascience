@@ -1,0 +1,17 @@
+#datainput
+grade1 = eval((input("Enter the first grade: ")))
+grade2 = eval((input("Enter the second grade: ")))
+grade3 = eval((input("Enter the third grade: ")))
+situation= None 
+#process
+average = (grade1 + grade2 + grade3) / 3
+rounded_average = round(average, 1)
+
+if average >= 7:
+    situation = "approved"
+elif average <= 6.9:
+    situation = "disapproved"
+#output
+print("The average grade is: ", average,"your situation is: ", situation)
+
+
