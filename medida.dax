@@ -1,0 +1,1 @@
+localização = CONCATENATE(olist_geolocation_dataset[geolocation_city], ",", olist_geolocation_dataset[geolocation_state])
