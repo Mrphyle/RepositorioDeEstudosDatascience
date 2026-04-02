@@ -1,7 +1,10 @@
 import mysql.connector
 from   mysql.connector import Error
-from datetime import datetime
+from datetime import datetime, time
 import requests
+import timer
+time.sleep()
+
 try:
     conexao = mysql.connector.connect(
         host='localhost',        # ou IP do servidor

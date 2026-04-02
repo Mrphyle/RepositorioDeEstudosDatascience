@@ -148,3 +148,5 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+Procidure para listar os colaboradores ativos:
