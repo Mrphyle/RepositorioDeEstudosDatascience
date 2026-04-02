@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS cotacao;
+USE cotacao;
+CREATE TABLE IF NOT EXISTS cotacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    valor DECIMAL(9, 4) NOT NULL,
+    data_hora DATETIME NULL);
+

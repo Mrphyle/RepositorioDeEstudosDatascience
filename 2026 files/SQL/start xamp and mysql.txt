@@ -1,0 +1,16 @@
+mrphyle@fedora:~$ sudo /opt/lampp/lampp start
+[sudo] password for mrphyle: 
+egrep: warning: egrep is obsolescent; using grep -E
+egrep: warning: egrep is obsolescent; using grep -E
+egrep: warning: egrep is obsolescent; using grep -E
+egrep: warning: egrep is obsolescent; using grep -E
+egrep: warning: egrep is obsolescent; using grep -E
+Starting XAMPP for Linux 8.2.12-0...
+XAMPP: Starting Apache...egrep: warning: egrep is obsolescent; using grep -E
+egrep: warning: egrep is obsolescent; using grep -E
+ok.
+XAMPP: Starting MySQL...egrep: warning: egrep is obsolescent; using grep -E
+ok.
+XAMPP: Starting ProFTPD...egrep: warning: egrep is obsolescent; using grep -E
+ok.
+mrphyle@fedora:~$ sudo /opt/lampp/bin/mysql -u root
