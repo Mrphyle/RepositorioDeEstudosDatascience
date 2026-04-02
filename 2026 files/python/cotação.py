@@ -7,7 +7,7 @@ try:
         host='localhost',        # ou IP do servidor
         user='root',
         password='',
-        database='aula'
+        database='cotacao'
     )
     valor_ask = requests.get("https://economia.awesomeapi.com.br/json/last/USD-BRL").json()["USDBRL"]["ask"]
 
