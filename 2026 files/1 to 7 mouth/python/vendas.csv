@@ -1,0 +1,16 @@
+id_venda,data,produto,categoria,quantidade,valor_unitario,cidade
+1,2025-01-05,Notebook,Eletronicos,1,3500,São Paulo
+2,2025-01-06,Mouse,Eletronicos,2,80,Rio de Janeiro
+3,2025-01-07,Cadeira,Moveis,1,900,Belo Horizonte
+4,2025-01-10,Teclado,Eletronicos,1,150,Curitiba
+5,2025-01-11,Monitor,Eletronicos,2,1200,São Paulo
+6,2025-01-15,Mesa,Moveis,1,700,Campinas
+7,2025-02-01,Notebook,Eletronicos,1,3500,São Paulo
+8,2025-02-02,Mouse,Eletronicos,3,80,Rio de Janeiro
+9,2025-02-03,Cadeira,Moveis,2,900,Belo Horizonte
+10,2025-02-05,Monitor,Eletronicos,1,1200,Curitiba
+11,2025-02-10,Mesa,Moveis,1,700,Campinas
+12,2025-02-12,Teclado,Eletronicos,2,150,São Paulo
+13,2025-03-01,Notebook,Eletronicos,2,3500,Rio de Janeiro
+14,2025-03-03,Mouse,Eletronicos,4,80,São Paulo
+15,2025-03-05,Cadeira,Moveis,1,900,Curitiba
