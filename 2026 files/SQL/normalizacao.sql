@@ -1,16 +1,4 @@
 /*tabelas*/
-CREATE TABLE aluno (
-    id_aluno INT PRIMARY KEY,
-    nome_aluno VARCHAR(100) NOT NULL,
-    data_nascimento DATE,
-    cpf VARCHAR(14) UNIQUE,
-    email VARCHAR(100) UNIQUE,
-    telefone VARCHAR(20),
-    endereco VARCHAR(150),
-    id_sala INT,
-    FOREIGN KEY (id_sala) REFERENCES sala(id_sala)
-);
-
 CREATE TABLE curso (
     id_curso INT PRIMARY KEY,
     nome_curso VARCHAR(100) NOT NULL,
@@ -24,8 +12,19 @@ CREATE TABLE sala (
     FOREIGN KEY (id_curso) REFERENCES curso(id_curso)
 );
 
-/*inserções*/
+CREATE TABLE aluno (
+    id_aluno INT PRIMARY KEY,
+    nome_aluno VARCHAR(100) NOT NULL,
+    data_nascimento DATE,
+    cpf VARCHAR(14) UNIQUE,
+    email VARCHAR(100) UNIQUE,
+    telefone VARCHAR(20),
+    endereco VARCHAR(150),
+    id_sala INT,
+    FOREIGN KEY (id_sala) REFERENCES sala(id_sala)
+);
 
+/*inserções*/
 INSERT INTO aluno VALUES
 (1, 'Carlos Silva', '2006-03-15', '123.456.789-00', 'carlos.silva@email.com', '(17) 99999-1111', 'Rua A, 123', 1),
 (2, 'Ana Souza', '2005-07-22', '987.654.321-00', 'ana.souza@email.com', '(17) 98888-2222', 'Rua B, 456', 2),
